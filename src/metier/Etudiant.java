@@ -4,6 +4,11 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * @author Benjamin Boutrois
+ *
+ */
 public class Etudiant extends Personne {
 	
 	// Propriétés

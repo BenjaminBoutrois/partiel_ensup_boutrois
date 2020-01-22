@@ -8,6 +8,11 @@ import metier.Enseignant;
 import metier.Etudiant;
 import service.GestionEcole;
 
+/**
+ * 
+ * @author Benjamin Boutrois
+ *
+ */
 public class Lanceur {
 
 	/**

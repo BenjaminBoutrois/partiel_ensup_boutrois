@@ -1,5 +1,10 @@
 package metier;
 
+/**
+ * 
+ * @author Benjamin Boutrois
+ *
+ */
 public class Cours {
 	
 	// Propriétés

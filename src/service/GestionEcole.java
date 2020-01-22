@@ -4,6 +4,11 @@ import metier.Cours;
 import metier.Ecole;
 import metier.Etudiant;
 
+/**
+ * 
+ * @author Benjamin Boutrois
+ *
+ */
 public class GestionEcole {
 	
 	/**
@@ -38,8 +43,9 @@ public class GestionEcole {
 	
 	/**
 	 * Modifie les informations d'un étudiant à partir d'une instance.
-	 * @param etudiant : L'instance d'étudiant.
+	 * @param nouvelEtudiant : L'instance d'étudiant.
 	 * @param idEtudiant : L'ID de l'étudiant à modifier.
+	 * @param ecole : L'école dans laquelle est l'étudiant à modifier.
 	 */
 	public static void modifierInformationsEtudiant(Etudiant nouvelEtudiant, int idEtudiant, Ecole ecole)
 	{
@@ -49,6 +55,7 @@ public class GestionEcole {
 	/**
 	 * Supprime un étudiant.
 	 * @param idEtudiant : L'ID de l'étudiant à supprimer.
+	 * @param ecole : L'école dans laquelle est l'étudiant.
 	 */
 	public static void supprimerEtudiant(int idEtudiant, Ecole ecole) {
 		ecole.supprimerEtudiant(idEtudiant);
@@ -56,6 +63,7 @@ public class GestionEcole {
 	
 	/**
 	 * Affiche la liste de tous les étudiants de l'école.
+	 * @param ecole : L'école dans laquelle on veut afficher tous les étudiants.
 	 */
 	public static void afficherTousLesEtudiants(Ecole ecole)
 	{

@@ -3,6 +3,11 @@ package metier;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * @author Benjamin Boutrois
+ *
+ */
 public class Ecole {
 	
 	// Propriétés
@@ -113,7 +118,6 @@ public class Ecole {
 	/**
 	 * Supprime un étudiant de la liste de l'école.
 	 * @param idEtudiant : L'ID de l'étudiant à supprimer.
-	 * @param ecole : L'école de l'étudiant.
 	 */
 	public void supprimerEtudiant(int idEtudiant) {
 		Etudiant etudiantASupprimer = null;
