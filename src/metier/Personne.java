@@ -6,7 +6,7 @@ public class Personne {
 	private int id;
 	private String nom;
 	private String prenom;
-	private String adresseEmail;
+	private String email;
 	private String adresse;
 	private String numeroTelephone;
 	
@@ -15,12 +15,12 @@ public class Personne {
 		
 	}
 	
-	public Personne(int id, String nom, String prenom, String adresseEmail, String adresse, String numeroTelephone) {
+	public Personne(int id, String nom, String prenom, String email, String adresse, String numeroTelephone) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
-		this.adresseEmail = adresseEmail;
+		this.setEmail(email);
 		this.adresse = adresse;
 		this.numeroTelephone = numeroTelephone;
 	}
@@ -44,12 +44,6 @@ public class Personne {
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	public String getAdresseEmail() {
-		return adresseEmail;
-	}
-	public void setAdresseEmail(String adresseEmail) {
-		this.adresseEmail = adresseEmail;
-	}
 	public String getAdresse() {
 		return adresse;
 	}
@@ -62,12 +56,20 @@ public class Personne {
 	public void setNumeroTelephone(String numeroTelephone) {
 		this.numeroTelephone = numeroTelephone;
 	}
-	
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	// Méthodes
-	
+
 	@Override
 	public String toString() {
-		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", adresseEmail=" + adresseEmail
-				+ ", adresse=" + adresse + ", numeroTelephone=" + numeroTelephone + "]";
+		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", adresse="
+				+ adresse + ", numeroTelephone=" + numeroTelephone + "]";
 	}
 }

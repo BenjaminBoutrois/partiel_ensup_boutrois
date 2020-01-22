@@ -41,16 +41,16 @@ public class GestionEcole {
 	 * @param etudiant : L'instance d'étudiant.
 	 * @param idEtudiant : L'ID de l'étudiant à modifier.
 	 */
-	public static void modifierInformationsEtudiant(Etudiant etudiant, int idEtudiant, Ecole ecole)
+	public static void modifierInformationsEtudiant(Etudiant nouvelEtudiant, int idEtudiant, Ecole ecole)
 	{
-		
+		ecole.modifierInformationsEtudiant(nouvelEtudiant, idEtudiant);
 	}
 	
 	/**
 	 * Supprime un étudiant.
 	 * @param idEtudiant : L'ID de l'étudiant à supprimer.
 	 */
-	public void supprimerEtudiant(int idEtudiant, Ecole ecole) {
+	public static void supprimerEtudiant(int idEtudiant, Ecole ecole) {
 		ecole.supprimerEtudiant(idEtudiant);
 	}
 	
@@ -59,6 +59,6 @@ public class GestionEcole {
 	 */
 	public static void afficherTousLesEtudiants(Ecole ecole)
 	{
-		System.out.println(ecole.getEtudiants());
+		ecole.afficherTousLesEtudiants();
 	}
 }

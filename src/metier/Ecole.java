@@ -77,7 +77,37 @@ public class Ecole {
 	 * @param etudiant : L'étudiant à ajouter.
 	 */
 	public void ajouterEtudiant(Etudiant etudiant) {
+		System.out.println("Ajout de l'étudiant " + etudiant.getPrenom()
+							+ " " + etudiant.getNom());
 		this.etudiants.add(etudiant);
+	}
+	
+	/**
+	 * Modifie les informations d'un étudiant.
+	 * @param nouvelEtudiant : Le nouvel étudiant qui a les bonnes informations.
+	 * @param idEtudiant : L'ID de l'étudiant à modifier.
+	 */
+	public void modifierInformationsEtudiant(Etudiant nouvelEtudiant, int idEtudiant)
+	{
+		Etudiant etudiantAModifier = null;
+		
+		for (Etudiant etudiant : this.getEtudiants()) {
+			if(etudiant.getId() == idEtudiant)
+			{
+				etudiantAModifier = etudiant;
+				break;
+			}
+		}
+		if (etudiantAModifier != null)
+		{
+			System.out.println("Modification de l'étudiant à l'ID \"" + idEtudiant + "\".");
+			etudiantAModifier.setNom(nouvelEtudiant.getNom());
+			etudiantAModifier.setPrenom(nouvelEtudiant.getPrenom());
+			etudiantAModifier.setEmail(nouvelEtudiant.getEmail());
+			etudiantAModifier.setAdresse(nouvelEtudiant.getAdresse());
+			etudiantAModifier.setNumeroTelephone(nouvelEtudiant.getNumeroTelephone());
+			etudiantAModifier.setDateNaissance(nouvelEtudiant.getDateNaissance());
+		}
 	}
 	
 	/**
@@ -97,7 +127,22 @@ public class Ecole {
 		}
 		
 		if (etudiantASupprimer != null)
+		{
+			System.out.println("Suppression de l'étudiant " + etudiantASupprimer.getPrenom()
+								+ " " + etudiantASupprimer.getNom());
 			this.getEtudiants().remove(etudiantASupprimer);
+		}
+	}
+	
+	/**
+	 * Affiche la liste de tous les étudiants.
+	 */
+	public void afficherTousLesEtudiants()
+	{
+		System.out.println("Affichage de tous les étudiants :");
+		for (Etudiant etudiant : this.getEtudiants()) {
+			System.out.println(etudiant.getPrenom() + " " + etudiant.getNom());
+		}
 	}
 
 	@Override

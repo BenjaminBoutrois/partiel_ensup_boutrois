@@ -56,12 +56,12 @@ public class Lanceur {
 											"0102030405", new Date(System.currentTimeMillis()));
 		
 		// Test modification d'un étudiant
-		GestionEcole.modifierInformationsEtudiant(etudiant4, etudiant.getId());
+		GestionEcole.modifierInformationsEtudiant(etudiant4, etudiant.getId(), ecole);
 
 		GestionEcole.afficherTousLesEtudiants(ecole);
 		
 		// Test suppression d'un étudiant
-		GestionEcole.supprimerEtudiant(etudiant.getId());
+		GestionEcole.supprimerEtudiant(etudiant.getId(), ecole);
 		
 		GestionEcole.afficherTousLesEtudiants(ecole);
 	}
